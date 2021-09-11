@@ -22,7 +22,7 @@ class Post(models.Model):
     
 class Commet(models.Model):
     title= models.CharField(max_length=127,null=True,blank=True)
-    post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
+    post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='commets')
 
     class Meta:
         verbose_name='Commet'

@@ -21,7 +21,7 @@
     <h5 class="card-title">{{post.title}}</h5>
     <p class="card-text">{{post.text}}</p>
     <a href="{% url 'index' %}" class="btn btn-primary">Go somewhere</a>
-    <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">{{post.commet}}#Commet</a>
+    <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">{{post.commets.all|length}}#Commet</a>
     <a href="{% url 'delete' post.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delate"></i>Delate</a>
 </div>
     {% endfor %}

@@ -12,7 +12,7 @@ def index(request):
 
 
 def post_detail(request,id):
-    commet = Post.objects.get(id=id)
+    commet = Commet.objects.get(id=id)
     context = {
         'commet': commet
     }
