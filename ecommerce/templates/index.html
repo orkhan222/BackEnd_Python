@@ -16,13 +16,17 @@
   <body>
     {% for post in post %}
     <div class="card" style="width: 18rem;">
-  <img src="{{post.image.url}}" class="card-img-top" alt="">
+  {% comment %} <img src="{{post.image.url}}" class="card-img-top" alt="#"> {% endcomment %}
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
     <p class="card-text">{{post.text}}</p>
     <a href="{% url 'index' %}" class="btn btn-primary">Go somewhere</a>
-    <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">{{post.commets.all|length}}#Commet</a>
+    <a href="{% url 'commet_detail' post.id %}" class="btn btn-primary">{{post.commets.all|length}}#Commet</a>
     <a href="{% url 'delete' post.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delate"></i>Delate</a>
+    <a href="{% url 'create'  %}" class="create" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Create"></i>Create</a>
+    <a href="{% url 'update' post.id  %}" class="update" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="pdate"></i>Update</a>
+
+
 </div>
     {% endfor %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
