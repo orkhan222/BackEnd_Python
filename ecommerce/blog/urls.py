@@ -1,13 +1,12 @@
 from django.urls import path
-from . import views
+from .views import *
 
 urlpatterns = [
-    path('', views.index,name="index"),
-    path('commet/<int:id>', views.commet,name="commet"),
-    path('commet_detail/<int:id>', views.commet_detail,name="commet_detail"),
-    path('delete/<int:id>', views.delete,name="delete"),
-    path('create/', views.create,name="create"),
-    path('update/<int:id>', views.update,name="update"),
+    path('', index,name="index"),
+    path('commet_detail/<int:id>', commet_detail,name="commet_detail"),
+    path('delete/<int:id>', delete,name="delete"),
+    path('create/', create,name="create"),
+    path('update/<int:id>', update,name="update"),
 
     
 ]

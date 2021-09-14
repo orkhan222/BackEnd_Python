@@ -3,7 +3,7 @@ from .models import Post,Commet
 from django.shortcuts import get_object_or_404
 from .models import *
 from .forms import *
-from django.views.generic.detail import DetailView
+
 def index(request):
     post = Post.objects.all()
     context = {
@@ -11,13 +11,6 @@ def index(request):
     }
     return render(request, 'index.html',context)
 
-
-def commet(request,id):
-    commet = Commet.objects.get(id=id)
-    context = {
-        'commet': commet
-    }
-    return render(request, 'index.html',context)
 
 
 def delete(request, id):

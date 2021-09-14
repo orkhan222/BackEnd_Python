@@ -16,7 +16,7 @@
   <body>
     {% for post in post %}
     <div class="card" style="width: 18rem;">
-  {% comment %} <img src="{{post.image.url}}" class="card-img-top" alt="#"> {% endcomment %}
+  <img src="{{post.image.ur}}" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
     <p class="card-text">{{post.text}}</p>
@@ -24,7 +24,7 @@
     <a href="{% url 'commet_detail' post.id %}" class="btn btn-primary">{{post.commets.all|length}}#Commet</a>
     <a href="{% url 'delete' post.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delate"></i>Delate</a>
     <a href="{% url 'create'  %}" class="create" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Create"></i>Create</a>
-    <a href="{% url 'update' post.id  %}" class="update" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="pdate"></i>Update</a>
+    <a href="{% url 'update' post.id  %}" class="update" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="update"></i>Update</a>
 
 
 </div>
