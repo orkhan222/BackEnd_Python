@@ -1,0 +1,32 @@
+{% extends "base/__base.html" %}
+{% load static %}
+{% block content %}
+<h4><a class="nav-link" href="{% url 'login' %}">Login <span class="sr-only"></span></a>
+    <hr>
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-user"></i>username</span>
+      </div>
+      {{form.username}}
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-envelope-square"></i>email</span>
+      </div>
+      {{form.email}}
+    </div>
+    <div class="input-group mb-2">
+        password1
+      {{form.password1}}
+    </div>
+    <div class="input-group mb-2">
+        password2
+      {{form.password2}}
+    </div>
+
+   <input type="submit">
+  </form>
+
+{% endblock content %}
